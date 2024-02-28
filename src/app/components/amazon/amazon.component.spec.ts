@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AboutPageComponent } from './about-page.component';
+import { AmazonComponent } from './amazon.component';
 
-describe('AboutPageComponent', () => {
-  let component: AboutPageComponent;
-  let fixture: ComponentFixture<AboutPageComponent>;
+describe('AmazonComponent', () => {
+  let component: AmazonComponent;
+  let fixture: ComponentFixture<AmazonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AboutPageComponent]
+      imports: [AmazonComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(AboutPageComponent);
+    fixture = TestBed.createComponent(AmazonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
