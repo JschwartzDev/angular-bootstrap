@@ -1,0 +1,49 @@
+<section>
+  <div
+    class="container-fluid p-2 d-flex justify-content-around bg-dark text-light lh-lg"
+  >
+    <div>logo</div>
+
+    <div id="search" class="input-group w-50">
+      <button class="btn btn-sm btn-secondary input-group-addon">All</button>
+      <input
+        type="text"
+        class="w-75"
+        placeholder="Search Amazon"
+        style="height: 40px"
+      />
+      <button class="btn btn-sm btn-warning input-group-addon">Search</button>
+    </div>
+    <div id="links">
+      <span>link 1</span>
+      <span>link 2</span>
+      <span>cart</span>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container-fluid" style="background-color: #232f3e">
+    <button class="btn btn-sm sub-nav-color text-light">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-list all-btn-svg"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+        />
+      </svg>
+      All
+    </button>
+    <button
+      *ngFor="let text of subNavText; let i = index"
+      class="btn btn-sm sub-nav-color text-light"
+    >
+      {{ text }}
+    </button>
+  </div>
+</section>

@@ -1,75 +1,30 @@
-<section>
-  <div
-    class="container-fluid p-2 d-flex justify-content-around bg-dark text-light"
-  >
-    <div>logo</div>
+<app-navigation></app-navigation>
 
-    <div id="search" class="input-group w-50">
-      <button class="btn btn-sm btn-secondary input-group-addon">All</button>
-      <input
-        type="text"
-        class="w-75"
-        placeholder="Search Amazon"
-        style="height: 40px"
-      />
-      <button class="btn btn-sm btn-warning input-group-addon">Search</button>
-    </div>
-    <div id="links">
-      <span>link 1</span>
-      <span>link 2</span>
-      <span>cart</span>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="container-fluid" style="background-color: #232f3e">
-    <button
-      *ngFor="let text of subNavText"
-      class="btn btn-sm sub-nav-color text-light"
-    >
-      {{ text }}
-    </button>
-  </div>
-</section>
-<section
-  id="background-slider-container"
-  class="d-flex justify-content-between"
-  style="height: 80vh; border: 1px solid black; background-color: lightblue"
->
-  <button
-    (click)="clickedLeftSliderBtn()"
-    [ngClass]="leftIsClicked ? '' : 'border-0'"
-    class="h-50 bg-transparent sub-nav-slider-button"
+<!--MAIN BACKGROUND CAROUSEL-->
+<app-background-carousel></app-background-carousel>
+<!--first-carousel-->
+<section style="background-color: lightblue">
+  <div
+    class="container justify-content-around d-flex"
+    style="background-color: lightgreen"
   >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="50"
-      height="50"
-      fill="currentColor"
-      class="bi bi-caret-left"
-      viewBox="0 0 16 16"
-    >
-      <path
-        d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"
-      />
-    </svg>
-  </button>
-  <button
-    (click)="clickedRightSliderBtn()"
-    [ngClass]="rightIsClicked ? '' : 'border-0'"
-    class="h-50 bg-transparent"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="50"
-      height="50"
-      fill="currentColor"
-      class="bi bi-caret-right"
-      viewBox="0 0 16 16"
-    >
-      <path
-        d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"
-      />
-    </svg>
-  </button>
+    <span class="left-scroll-button">left</span>
+    <div class="container justify-content-around">
+      <div class="row justify-content-around text-center">
+        <div
+          class="slider-image-container"
+          *ngFor="let src of images; let i = index"
+        >
+          <img
+            *ngIf="this.firstSliderCount === 1"
+            src="{{ src }}"
+            alt=""
+            class="slider-image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <span class="left-scroll-button">right</span>
+  </div>
 </section>

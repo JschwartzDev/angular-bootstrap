@@ -1,0 +1,13 @@
+.background-slider-container {
+  min-height: 100vh;
+  border: 1px solid black;
+  background-image: url(https://m.media-amazon.com/images/I/71CX5ePtA7L._SX3000_.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-size: 100% 100%;
+  mask-image: linear-gradient(#fff, rgba(255, 255, 255, 0));
+}
+
+.main-slider-btn {
+  height: 50vh;
+}
