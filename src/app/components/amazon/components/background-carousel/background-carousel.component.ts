@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FirstSliderComponent } from '../first-slider/first-slider.component';
 
 @Component({
   selector: 'app-background-carousel',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FirstSliderComponent],
   templateUrl: './background-carousel.component.html',
   styleUrl: './background-carousel.component.scss',
 })
