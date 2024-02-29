@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FirstSliderComponent } from '../first-slider/first-slider.component';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-background-carousel',
@@ -10,6 +11,7 @@ import { FirstSliderComponent } from '../first-slider/first-slider.component';
   styleUrl: './background-carousel.component.scss',
 })
 export class BackgroundCarouselComponent {
+  bgCount: number = 0;
   bgImgSrcs: string[] = [
     'https://m.media-amazon.com/images/I/6103XTOauAL._SX3000_.jpg',
     'https://m.media-amazon.com/images/I/71zjoCL+cXL._SX3000_.jpg',
@@ -26,4 +28,6 @@ export class BackgroundCarouselComponent {
   clickedRightSliderBtn() {
     this.rightIsClicked = !this.rightIsClicked;
   }
+
+  previous() {}
 }

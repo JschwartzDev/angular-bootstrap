@@ -20,6 +20,5 @@ export class NavigationComponent {
     'Buy Again',
     'Amazon Home',
     'Amazon Business',
-    'Shop Black Owned Businesses',
   ];
 }

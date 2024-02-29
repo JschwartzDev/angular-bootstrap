@@ -2,27 +2,35 @@
   <div
     class="container-fluid p-2 d-flex justify-content-around bg-dark text-light lh-lg"
   >
-    <div>logo</div>
-
+    <div class="w-25 d-flex justify-content-around">
+      <span>Amazon Logo</span>
+      <span>My Address</span>
+    </div>
     <div id="search" class="input-group w-50">
       <button class="btn btn-sm btn-secondary input-group-addon">All</button>
       <input
         type="text"
-        class="w-75"
+        class="search-bar"
         placeholder="Search Amazon"
         style="height: 40px"
       />
       <button class="btn btn-sm btn-warning input-group-addon">Search</button>
     </div>
-    <div id="links">
-      <span>link 1</span>
-      <span>link 2</span>
-      <span>cart</span>
+
+    <div class="w-25 d-flex justify-content-around">
+      <span>EN</span>
+      <span>Hello You</span>
+      <span>Returns & Orders</span>
+      <span>Cart</span>
     </div>
   </div>
 </section>
+<!--SUBNAV TEXT-->
 <section>
-  <div class="container-fluid" style="background-color: #232f3e">
+  <div
+    class="container-fluid d-flex justify-content-around"
+    style="background-color: #232f3e"
+  >
     <button class="btn btn-sm sub-nav-color text-light">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -45,5 +53,10 @@
     >
       {{ text }}
     </button>
+    <div class="d-inline">
+      <button class="btn btn-sm sub-nav-color text-light">
+        Shop Black Owned Businesses
+      </button>
+    </div>
   </div>
 </section>
