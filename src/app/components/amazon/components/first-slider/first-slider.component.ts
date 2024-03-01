@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Inject, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ImageService } from '../../../../services/imagesService';
 
 @Component({
   selector: 'app-first-slider',
@@ -8,17 +9,24 @@ import { CommonModule } from '@angular/common';
   templateUrl: './first-slider.component.html',
   styleUrl: './first-slider.component.scss',
 })
-export class FirstSliderComponent {
-  images: any = [
-    'https://m.media-amazon.com/images/I/51WnvXCQHcL._SY500__AC_SY200_.jpg',
-    'https://m.media-amazon.com/images/I/41Gg2jRd6YL._SY500__AC_SY200_.jpg',
-    'https://m.media-amazon.com/images/I/41RNhq8lcmL._SY500__AC_SY200_.jpg',
-    'https://m.media-amazon.com/images/I/41JpXx-8NsL._SY500__AC_SY200_.jpg',
-    'https://m.media-amazon.com/images/I/41i3FSMekgL._SY500__AC_SY200_.jpg',
-    'https://m.media-amazon.com/images/I/31H6Mgu96TL._SY500__AC_SY200_.jpg',
-    'https://m.media-amazon.com/images/I/51+e2x8GSNL._SY500__AC_SY200_.jpg',
-    'https://m.media-amazon.com/images/I/41l7ZJdrNYL._SY500__AC_SY200_.jpg',
-  ];
+export class FirstSliderComponent implements OnInit {
+  private imageService = inject(ImageService);
+  images: any = [];
+
+  ngOnInit(): void {
+    this.getImages();
+  }
+
+  getImages(): any {
+    this.imageService.getImages().subscribe({
+      next: (data: any) => {
+        this.images = data;
+      },
+      error: (error) => {
+        console.log('erorr fetching data');
+      },
+    });
+  }
 
   next() {
     let removedElement = this.images.shift();

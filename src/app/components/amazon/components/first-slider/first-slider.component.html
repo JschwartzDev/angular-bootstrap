@@ -4,13 +4,13 @@
       <div class="container-fluid">
         <div class="slider-wrap">
           <div class="slider-main">
-            <div class="item" *ngFor="let src of images; let i = index">
-              <img src="{{ src }}" alt="" />
+            <div class="item" *ngFor="let image of images; let i = index">
+              <img src="{{ image.url }}" alt="" />
               <div class="p-1">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
                 ducimus.
               </div>
-              <button class="btn btn-dark bt-lg p-2">More Info!</button>
+              <button class="btn btn-dark bt-lg p-2">Add To Cart</button>
             </div>
           </div>
           <div class="button-area">

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FirstSliderComponent } from '../first-slider/first-slider.component';
-import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-background-carousel',
